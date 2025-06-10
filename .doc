@@ -218,3 +218,15 @@ mt-4 → Margin top de 1rem (espaço acima do elemento).
 | `block`     | Visível, ocupando toda a linha |
 | `sm:block`  | Fica `block` a partir de 640px |
 | `sm:hidden` | Esconde a partir de 640px      |
+
+
+
+✅ Explicando
+
+| Parte                         | Função                                                               |
+| ----------------------------- | -------------------------------------------------------------------- |
+| `useEffect()`                 | Detecta o tema ao carregar ou navegar na SPA                         |
+| `setIsDark()`                 | Atualiza o estado para refletir o modo atual                         |
+| `localStorage.setItem()`      | Salva a escolha do usuário localmente (persistente)                  |
+| `document.documentElement...` | Aplica a classe `.dark` ao `<html>` dinamicamente                    |
+| `MoonIcon` / `SunIcon`        | Mostram apenas o ícone correspondente ao estado atual (`dark:block`) |
