@@ -1,10 +1,14 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
 const ToggleTheme = () => {
+    const toggle = () => {
+        document.documentElement.classList.toggle("dark");
+    }
+
     return (
-        <div className="cursor-pointer">
-            <MoonIcon className="h-8 text-gray-100 dark:hidden" />
-            <SunIcon className="h-8 text-gray-100 dark:block" />
+        <div className="hidden sm:block cursor-pointer">
+            <MoonIcon className="h-8 text-gray-100 block dark:hidden" onClick={toggle}/>
+            <SunIcon className="h-8 text-gray-100 hidden dark:block" onClick={toggle}/>
         </div>
       );
 }
